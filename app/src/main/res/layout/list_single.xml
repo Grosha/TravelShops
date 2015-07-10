@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TableRow>
+
+        <ImageView
+            android:id="@+id/imgForList"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+             />
+
+        <TextView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/textForList"
+            android:layout_width="262dp"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:text="TextView"
+            android:textColor="#fffbffbe"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:paddingLeft="30dp"></TextView>
+
+    </TableRow>
+</TableLayout>
