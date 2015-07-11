@@ -9,7 +9,7 @@
             android:id="@+id/imgForList"
             android:layout_width="30dp"
             android:layout_height="30dp"
-             />
+            android:layout_gravity="center_vertical" />
 
         <TextView xmlns:android="http://schemas.android.com/apk/res/android"
             android:id="@+id/textForList"
@@ -20,7 +20,9 @@
             android:textColor="#fffbffbe"
             android:textSize="24sp"
             android:textStyle="bold"
-            android:paddingLeft="30dp"></TextView>
+            android:paddingLeft="30dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"></TextView>
 
     </TableRow>
 </TableLayout>
