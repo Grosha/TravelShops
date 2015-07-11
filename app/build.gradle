@@ -10,6 +10,7 @@ android {
         targetSdkVersion 22
         versionCode 1
         versionName "1.0"
+        //testPackageName "com.hrom.andrew.travelshops"
     }
     buildTypes {
         release {
@@ -25,4 +26,6 @@ dependencies {
     compile('com.mikepenz:materialdrawer:3.0.9@aar') {
         transitive = true
     }
+
+    androidTestCompile 'com.jayway.android.robotium:robotium-solo:5.2.1'
 }

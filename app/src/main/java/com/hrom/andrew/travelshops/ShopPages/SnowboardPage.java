@@ -14,7 +14,7 @@ import com.hrom.andrew.travelshops.DifferentObjects.CustomList;
 import com.hrom.andrew.travelshops.DifferentObjects.CustomListForSnowboard;
 import com.hrom.andrew.travelshops.DifferentObjects.Url;
 import com.hrom.andrew.travelshops.R;
-import com.hrom.andrew.travelshops.ShopDatas.SnowbordShop;
+import com.hrom.andrew.travelshops.ShopDatas.SnowboardShop;
 import com.hrom.andrew.travelshops.ShopDatas.SportShop;
 import com.mikepenz.materialdrawer.Drawer;
 import com.mikepenz.materialdrawer.DrawerBuilder;
@@ -32,7 +32,7 @@ public class SnowboardPage extends AppCompatActivity {
     private ListView list;
     private CustomList adapter;
     private Url url;
-    private SnowbordShop snowbordShop;
+    private SnowboardShop snowbordShop;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,7 +44,7 @@ public class SnowboardPage extends AppCompatActivity {
         initializeNavigatorDrawer(toolbar);
 
         //url = new Url();
-        snowbordShop = new SnowbordShop();
+        snowbordShop = new SnowboardShop();
         chooseListUrl(SnowboardPage.this, list, snowbordShop.getListShops(), snowbordShop.getIconShops(), snowbordShop);
         //url.chooseListUrl(SnowboardPage.this, adapter, list, snowbordShop.getListShops(), snowbordShop.getIconShops(), snowbordShop);
     }

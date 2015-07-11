@@ -5,7 +5,7 @@ import com.hrom.andrew.travelshops.R;
 import java.util.ArrayList;
 import java.util.List;
 
-public class SnowbordShop extends SportShop {
+public class SnowboardShop extends SportShop {
     @Override
     public List<String> getListShops() {
         List<String> siteShops = new ArrayList<>();
