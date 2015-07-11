@@ -1,6 +1,7 @@
 package com.hrom.andrew.travelshops.ShopPages;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -10,6 +11,8 @@ import android.widget.ListView;
 
 import com.hrom.andrew.travelshops.DifferentObjects.CustomList;
 import com.hrom.andrew.travelshops.R;
+import com.hrom.andrew.travelshops.ShopDatas.SkisShop;
+import com.hrom.andrew.travelshops.ShopDatas.SportShop;
 import com.mikepenz.materialdrawer.Drawer;
 import com.mikepenz.materialdrawer.DrawerBuilder;
 import com.mikepenz.materialdrawer.accountswitcher.AccountHeader;
@@ -19,10 +22,13 @@ import com.mikepenz.materialdrawer.model.PrimaryDrawerItem;
 import com.mikepenz.materialdrawer.model.SecondaryDrawerItem;
 import com.mikepenz.materialdrawer.model.interfaces.IDrawerItem;
 
+import java.util.List;
+
 public class SkisPage extends AppCompatActivity {
     private Drawer drawer;
     private ListView list;
     private CustomList adapter;
+    private SkisShop skisShop;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +38,22 @@ public class SkisPage extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         initializeNavigatorDrawer(toolbar);
+
+        skisShop = new SkisShop();
+        chooseListUrl(list, skisShop.getListShops(), skisShop.getIconShops(), skisShop);
+    }
+
+    private void chooseListUrl(ListView list, List shops, List imageShops, final SportShop sportShop) {
+        CustomList adapter = new CustomList(SkisPage.this, shops, imageShops);
+        list = (ListView) findViewById(R.id.travelList);
+        list.setAdapter(adapter);
+        list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(sportShop.getLinkShop(position)));
+                startActivity(intent);
+            }
+        });
     }
 
     private void initializeNavigatorDrawer(Toolbar toolbar) {
