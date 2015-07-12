@@ -10,6 +10,7 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 
 import com.hrom.andrew.travelshops.DifferentObjects.CustomList;
+import com.hrom.andrew.travelshops.DifferentObjects.CustomListForSnowboard;
 import com.hrom.andrew.travelshops.R;
 import com.hrom.andrew.travelshops.ShopDatas.SkisShop;
 import com.hrom.andrew.travelshops.ShopDatas.SportShop;
@@ -44,7 +45,8 @@ public class SkisPage extends AppCompatActivity {
     }
 
     private void chooseListUrl(ListView list, List shops, List imageShops, final SportShop sportShop) {
-        CustomList adapter = new CustomList(SkisPage.this, shops, imageShops);
+        //CustomList adapter = new CustomList(SkisPage.this, shops, imageShops);
+        CustomListForSnowboard adapter = new CustomListForSnowboard(SkisPage.this, shops, imageShops);
         list = (ListView) findViewById(R.id.travelList);
         list.setAdapter(adapter);
         list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
