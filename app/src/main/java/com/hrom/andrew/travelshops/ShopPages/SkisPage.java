@@ -45,7 +45,6 @@ public class SkisPage extends AppCompatActivity {
     }
 
     private void chooseListUrl(ListView list, List shops, List imageShops, final SportShop sportShop) {
-        //CustomList adapter = new CustomList(SkisPage.this, shops, imageShops);
         CustomListForSnowboard adapter = new CustomListForSnowboard(SkisPage.this, shops, imageShops);
         list = (ListView) findViewById(R.id.travelList);
         list.setAdapter(adapter);
