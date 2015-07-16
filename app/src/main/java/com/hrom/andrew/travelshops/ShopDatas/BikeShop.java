@@ -83,10 +83,4 @@ public class BikeShop extends SportShop {
 
         return listAdressWebSite.get(position);
     }
-
-    private Map<Integer, String> mapIconAndLink() {
-        Map<Integer, String> map = new HashMap<>();
-        map.put(R.drawable.web_, "http://velomarket.org.ua/");
-        return map;
-    }
 }
