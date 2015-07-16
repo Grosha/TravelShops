@@ -65,7 +65,7 @@ public class MountainPage extends AppCompatActivity {
                 .withActivity(this)
                 .withToolbar(toolbar)
                 .withAccountHeader(header)
-                .withDisplayBelowToolbar(true)
+                .withDisplayBelowToolbar(false)
                 .withTranslucentStatusBar(true)
                 .withActionBarDrawerToggleAnimated(true)
                 .addDrawerItems(new PrimaryDrawerItem()
