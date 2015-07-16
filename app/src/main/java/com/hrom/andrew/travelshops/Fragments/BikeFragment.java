@@ -32,9 +32,9 @@ public class BikeFragment extends ListFragment{
         }
 
         String[] from = {"img","txt"};
-        int[] to = {R.id.imgForList,R.id.textForSnowboard};
+        int[] to = {R.id.imgForList,R.id.textForList};
 
-        SimpleAdapter adapter = new SimpleAdapter(getActivity().getBaseContext(),listBikeShop,R.layout.list_for_snowboard,from,to);
+        SimpleAdapter adapter = new SimpleAdapter(getActivity().getBaseContext(),listBikeShop,R.layout.list_single,from,to);
         setListAdapter(adapter);
 
         return super.onCreateView(inflater, container, savedInstanceState);
